@@ -1,0 +1,529 @@
+/*
+  -- COLORS --
+  Purple-100 = #DBD1FC;
+  Purple-500 = #7551DC;
+
+  Yellow-100 = #F9EEE2;
+  Yellow-500 = #FFCC6A;
+
+  White = #FFFFFF
+  Black = #121212
+*/
+
+/* FONT FACES AND PRESETS */
+@font-face {
+  font-family: DMSans-Medium;
+  src: url("assets/fonts/static/DMSans-Medium.ttf"), type("truetype");
+}
+
+@font-face {
+  font-family: "DMSans-MediumItalic";
+  src: url("assets/fonts/static/DMSans-MediumItalic.ttf"), type("truetype");
+}
+
+@font-face {
+  font-family: "DMSans-Regular";
+  src: url("assets/fonts/static/DMSans-Regular.ttf"), type("truetype");
+}
+
+@font-face {
+  font-family: "DMSans-Italic";
+  src: url("assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf"), type("truetype");
+}
+
+h1, h2, h3, p {
+  margin: 0
+}
+
+h1 {
+  font-family: "DMSans-Medium";
+  font-size: 62px;
+  line-height: 93.5%;
+  letter-spacing: -3px;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: "DMSans-Medium";
+  font-size: 40px;
+  line-height: 90%;
+  letter-spacing: -2px;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "DMSans-Medium";
+  font-size: 32px;
+  line-height: 87.5%;
+  letter-spacing: -2px;
+  font-weight: 500;
+}
+
+.yellow-text {
+  color: #FFCC6A;
+}
+
+.purple-text {
+  color: #7551DC;
+}
+
+.italic-text {
+  font-family: "DMSans-Italic";
+}
+
+/* BODY STYLES */
+body {  
+  padding: 64px 0;
+  background-color: #f6f5f6;
+
+  /* default body font */
+  font-family: "DMSans-Medium";
+}
+
+/* BENTO DESKTOP GRID */
+.bento-grid-centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bento-grid-container {
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 16px;
+  grid-template-areas:
+    'column-1 column-2 column-2 column-4'
+    'column-1 column-2 column-2 column-4'
+    'column-1 column-3 column-3 column-3'
+}
+
+.bento-grid-container div {
+  border-radius: 10px;
+}
+
+/* COLUMN GRID LABELS */
+.column1 {
+  grid-area: column-1;
+}
+.column2 {
+  grid-area: column-2;
+}
+.column3 {
+  grid-area: column-3
+}
+.column4 {
+  grid-area: column-4;
+}
+
+.bento-grid-container > div {
+  display: grid;
+  grid-gap: 16px;
+}
+
+.inner-grid-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.inner-grid-2 {
+  display: grid;
+  grid-template-columns: .49fr 1fr;
+  gap: 16px;
+}
+
+/* BENTO ITEM STYLES */
+.item-1 {
+  display: flex;
+  align-items: center;
+  background-color: #F9EEE2;
+  padding: 32px;
+}
+
+.item-2, .item-5 {
+  background-color: #FFCC6A;
+  padding: 24px;
+}
+
+.item-2 {
+  display: flex;
+  align-items: center;
+}
+
+.item-5 {
+  padding-bottom: 0;
+}
+
+.item-3, .item-7 {
+  background-color: #7551DC;
+  color: white;
+  padding: 24px;
+}
+
+/* ITEM-3 PADDING ADJUSTING */
+.item-3 {
+  display: flex;
+  padding: 32px;
+
+  /* text-align for header */
+  text-align: center; 
+}
+
+.item-4, .item-6 {
+  background-color: white;
+  padding: 24px;
+}
+
+.item-8 {
+  background-color: #DBD1FC;
+  padding: 32px;
+}
+
+/* ITEM CONTENT POSITIONING */
+.item-1-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item-2-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-3-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.item-4-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-5-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-6-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-6-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item-7-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.item-7-content h2 {
+  width: 50%;
+}
+
+.item-8-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* IMAGE STYLES */
+img {
+  width: 100%;
+}
+
+.item-1 img {
+  max-width: 190px;
+}
+
+.item-2 > img {
+  max-width: 219px;
+}
+
+.item-3 img {
+  max-width: 192px;
+  margin-bottom: 8px;
+}
+
+/* RELATIVE-POSITIONING FOR ITEM-4 IMAGE */
+.item-4 {
+  position: relative;
+  overflow: hidden;
+}
+
+.item-4 img {
+  width: 316px;
+  height: 66px;
+  position: relative;
+  left: 10px
+}
+/*********************************/
+
+/* RELATIVE-POSITIONING FOR ITEM-5 IMAGE */
+.item-5 {
+  position: relative;
+  overflow: hidden;
+}
+
+.item-5 img {
+  position: absolute;
+  top: 150px;
+  max-width: 208px;
+}
+/*********************************/
+
+.item-6 img {
+  max-width: 178px;
+  max-height: 66px;
+}
+
+.item-7 img {
+  max-width: 227px;
+}
+
+/*********************************/
+
+/* RELATIVE-POSITIONING FOR ITEM-8 IMAGE */
+.item-8 {
+  position: relative;
+  overflow: hidden;
+}
+
+.item-8 img {
+  width: 357px;
+  position: relative;
+  left: 85px;
+}
+
+/* TABLET MEDIA QUERY */
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .bento-grid-centering {
+    height: 100%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 54px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  body {
+    padding: 64px 32px;
+    margin: 0;
+  }
+
+  .bento-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+    grid-template-areas:
+      'column-2'
+      'column-4'
+      'column-3'
+      'column-1';
+  }
+
+  /* make item-1 and item-2 separate into two columns in tablet mode */
+  .column1 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .item-2 {
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  /* make item-6 and item-7 separate into two columns in tablet mode */ 
+  .inner-grid-2 {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .item-3 {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item-3-content {
+    max-width: 60%;
+  }
+  
+  /* switch item 6 and item 7 when displayed in tablet mode */
+  .item-6 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .item-7 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .item-7-content h2 {
+    width: 40%;
+  }
+
+  /* move image 4 back */
+  .item-4 img {
+    left: -10px;
+  }
+
+  /* adjust consistent scheduling image to match tablet design */
+  .item-5 img {
+    position: relative;
+    top: 0;
+    max-width: 208px;
+  }
+
+  .item-5-content {
+    gap: 16px;
+  }
+
+  .item-6-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .item-7-content {
+    gap: 40px;
+    justify-content: center;
+  }
+
+  /* item-8 content adjusting */
+  .item-8-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .item-8-content {
+   text-align: center;
+  }
+
+  .item-8-content p {
+    width: 55%;
+  }
+
+  .item-8-content img {
+    left: 0;
+  }
+}
+
+/* MOBILE MEDIA QUERY */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 32px 16px;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 46px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  .bento-grid-centering {
+    height: 100%;
+  }
+
+  .bento-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    grid-template-areas:
+      'column-2'
+      'column-4'
+      'column-3'
+      'column-1';
+  }
+
+  .inner-grid-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .inner-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .column1 {
+    grid-template-columns: 1fr;
+  }
+
+  .item-2-content {
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .item-4 {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .item-4 img {
+    left: 0;
+  }
+
+  .item-5 {
+    gap: 16px;
+  }
+
+  .item-5 img {
+    position: relative;
+    top: 0
+  }
+
+  .item-6-content {
+    gap: 16px;
+  }
+
+  .item-7-content {
+    gap: 40px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .item-7-content h2 {
+    width: 70%;
+  }
+
+  .item-8-content {
+    text-align: center;
+  }
+
+  .item-8 img {
+    position: static;
+    max-width: 308px;
+  }
+}
